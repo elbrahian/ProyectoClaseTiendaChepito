@@ -1,7 +1,9 @@
 package co.edu.uco.tiendachepito.data.dao.factory.sql.azuresql;
 
 import java.sql.Connection;
+import java.sql.DriverManager;
 
+import co.edu.uco.tiendachepito.crosscutting.helpers.SqlHelper;
 import co.edu.uco.tiendachepito.data.dao.CiudadDAO;
 import co.edu.uco.tiendachepito.data.dao.DepartamentoDAO;
 import co.edu.uco.tiendachepito.data.dao.PaisDAO;
@@ -20,32 +22,30 @@ public final class AzureSqlDAOFactory extends DAOFactory {
 
 	@Override
 	protected void obtenerConexion() {
-		// TODO Auto-generated method stub
 		connection = null;
 
 	}
 
 	@Override
-	public void iniciarTransaccion() {
-		// TODO Auto-generated method stub
-
+	public void iniciarTransaccion(){
+		SqlHelper.startTransaction(connection);
 	}
 
 	@Override
 	public void confirmarTransaccion() {
-		// TODO Auto-generated method stub
+		SqlHelper.commit(connection);
 
 	}
 
 	@Override
 	public void cancelarTransaccion() {
-		// TODO Auto-generated method stub
+		SqlHelper.rollback(connection);
 
 	}
 
 	@Override
 	public void cerrarConexion() {
-		// TODO Auto-generated method stub
+		SqlHelper.close(connection);
 
 	}
 

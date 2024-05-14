@@ -28,7 +28,8 @@ public final class MessageCatalogBase implements MessageCatalog {
 				"El mensaje con identificador \"${1}\" que se intentó obtener, no está configurado para residir en el catálogo de mensajes externo..."));
 		mensajes.put(CodigoMensaje.M00006.getIdentificador(), new Mensaje(CodigoMensaje.M00006,
 				"El identificador del mensaje \"${1}\" que se intentó obtener, no está en el catálogo de mensajes externo..."));
-
+		mensajes.put(CodigoMensaje.M00023.getIdentificador(),new Mensaje(CodigoMensaje.M00023,
+				"Se ha presentado un problema tratando de realizar un insert de la informacion del pais \"${1}\" en la tabla pais de la tabla azureSql.."));
 	}
 
 	@Override

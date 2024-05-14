@@ -6,6 +6,11 @@ import co.edu.uco.tiendachepito.data.dao.PaisDAO;
 
 public abstract class DAOFactory {
 
+	public static final DAOFactory getFactory(){
+
+		return null;
+	}
+
 	protected abstract void obtenerConexion();
 
 	public abstract void iniciarTransaccion();

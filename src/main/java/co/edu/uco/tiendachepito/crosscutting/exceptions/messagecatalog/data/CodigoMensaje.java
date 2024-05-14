@@ -12,11 +12,12 @@ public enum CodigoMensaje {
 	M00005(TipoMensaje.TECNICO, CategoriaMensaje.ERROR, "00005", true),
 	M00006(TipoMensaje.TECNICO, CategoriaMensaje.ERROR, "00006", true),
 	M00007(TipoMensaje.USUARIO, CategoriaMensaje.EXITO, "00007", false),
-	M00008(TipoMensaje.USUARIO, CategoriaMensaje.EXITO, "00008", true);
+	M00008(TipoMensaje.USUARIO, CategoriaMensaje.EXITO, "00008", true),
+	M00023(TipoMensaje.TECNICO, CategoriaMensaje.ERROR, "00023", true);
 
 	private TipoMensaje tipo;
 	private CategoriaMensaje categoria;
-	private String codigo;
+	private String codigo;se
 	private boolean base;
 
 	private CodigoMensaje(final TipoMensaje tipo, final CategoriaMensaje categoria, final String codigo,
