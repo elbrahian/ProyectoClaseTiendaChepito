@@ -1,5 +1,6 @@
-package co.edu.uco.tiendachepito.data.dao.general;
+package co.edu.uco.tiendachepito.data.DAO.general;
 
-public interface CrearDAO<E> {
-	void crear(E entidad);
+public interface CrearDAO <E> {
+
+    void crear (E entidad);
 }

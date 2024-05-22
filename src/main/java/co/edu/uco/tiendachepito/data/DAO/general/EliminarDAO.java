@@ -1,5 +1,5 @@
-package co.edu.uco.tiendachepito.data.dao.general;
+package co.edu.uco.tiendachepito.data.DAO.general;
 
 public interface EliminarDAO {
-	void eliminar(int id);
+    void eliminar(int id);
 }
